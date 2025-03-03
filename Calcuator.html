@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="Calculator.css">
+    <link href="https://fonts.cdnfonts.com/css/calculator" rel="stylesheet">
+    <script src="Calculator.js"></script>
+</head>
+
+<body>
+    <div id="calculator">
+        <h1>Scientific Calculator</h1>
+        <h3>Perform all scientic calculations using the calculator displayed... Enjoy trying all functions !!!</h3>
+        <div id="full-body">
+            <p class="primary-class"><i><b>fx-82MS</b></i></p>
+            <br>
+            <br>
+            <div class="output-boxes">
+                <div class="output-stack"></div>
+                <br>
+                <div class="output-result"></div>
+            </div>
+            <div id="buttons">
+                <table>
+                    <tr id="row1">
+                        <td><button value="sin" onclick="sin()"><b>sin</b></button></td>
+                        <td><button value="cos" onclick="cos()"><b>cos</b></button></td>
+                        <td><button value="tan" onclick="tan()"><b>tan</b></button></td>
+                        <td><input type="radio" name="options" id="input" value="Deg" onclick="setDegree()"
+                                checked="true"><b>Deg</b></td>
+                        <td><input type="radio" name="options" id="input" value="Rad" onclick="setRadian()"><b>Rad</b>
+                        </td>
+                    </tr>
+                    <tr id="row2">
+                        <td><button value="sin-1" onclick="sinInverse()"><b>sin<sup>-1</sup></b></button></td>
+                        <td><button value="cos-1" onclick="cosInverse()"><b>cos<sup>-1</sup></b></button></td>
+                        <td><button value="tan-1" onclick="tanInverse()"><b>tan<sup>-1</sup></b></button></td>
+                        <td><button value="exponent" onclick="exponent()"><b>e</button></b></td>
+                        <td><button value="pi" onclick="pi()"><b>&pi;</b></button></td>
+                    </tr>
+                    <tr id="row3">
+                        <td><button value="xPowY" onclick="xPowY()"><b>x<sup>y</sup></b></button></td>
+                        <td><button value="cube" onclick="cube()"><b>x<sup>3</sup></b></button></td>
+                        <td><button value="square" onclick="square()"><b>x<sup>2</sup></b></button></td>
+                        <td><button value="ePowX" onclick="ePowX()"><b>e<sup>x</sup></b></button></td>
+                        <td><button value="10PowX" onclick="_10PowX()"><b>10<sup>x</sup></b></button></td>
+                    </tr>
+                    <tr id="row4">
+                        <td><button value="YrootX" onclick="YRootX()"><b><sup>y</sup>&radic;x</b></button></td>
+                        <td><button value="cubeRoot" onclick="cubeRoot()"><b><sup>3</sup>&radic;x</b></button></td>
+                        <td><button value="squareRoot" onclick="squareRoot()"><b><sup>2</sup>&radic;x</b></button></td>
+                        <td><button value="ln" onclick="ln()"><b>ln</b></button></td>
+                        <td><button value="log" onclick="log()"><b>log</b></button></td>
+                    </tr>
+                    <tr id="row5">
+                        <td><button value="openBracket" onclick="openBracket()"><b>(</b></button></td>
+                        <td><button value="closeBracket" onclick="closeBracket()"><b>)</b></button></td>
+                        <td><button value="_1byX" onclick="oneByX(x)"><b>1/x</b></button></td>
+                        <td><button value="modulus" onclick="mod()"><b>%</b></button></td>
+                        <td><button value="factorial" onclick="factorial()"><b>n!</b></button></td>
+                    </tr>
+                    <tr id="row6">
+                        <td><button value="7" onclick="append7()"><b>7</b></button></td>
+                        <td><button value="8" onclick="append8()"><b>8</b></button></td>
+                        <td><button value="9" onclick="append9()"><b>9</b></button></td>
+                        <td><button value="+" onclick="add()"><b>&plus;</b></button></td>
+                        <td><button value="back" onclick="clearOne()"><b>Back</b></button></td>
+                    </tr>
+                    <tr id="row7">
+                        <td><button value="4" onclick="append4()"><b>4</b></button></td>
+                        <td><button value="5" onclick="append5()"><b>5</b></button></td>
+                        <td><button value="6" onclick="append6()"><b>6</b></button></td>
+                        <td><button value="-" onclick="minus()"><b>&minus;</b></button></td>
+                        <td><button value="result" onclick="ans()"><b>Ans</b></button></td>
+                    </tr>
+                    <tr id="row8">
+                        <td><button value="1" onclick="append1()"><b>1</b></button></td>
+                        <td><button value="2" onclick="append2()"><b>2</b></button></td>
+                        <td><button value="3" onclick="append3()"><b>3</b></button></td>
+                        <td><button value="*" onclick="multiply()"><b>x</b></button></td>
+                        <td><button value="M+" onclick="mPlus()"><b>M+</b></button></td>
+                    </tr>
+                    <tr id="row9">
+                        <td><button value="0" onclick="append0()"><b>0</b></button></td>
+                        <td><button value="." onclick="appendDecimal()"><b>.</b></button></td>
+                        <td><button value="EXP" onclick="exp()"><b>EXP</b></button></td>
+                        <td><button value="/" onclick="divide()"><b>&divide;</b></button></td>
+                        <td><button value="M-" onclick="mMinus()"><b>M-</b></button></td>
+                    </tr>
+                    <tr id="row10">
+                        <td><button value="+-" onclick="plusMinus()"><b>&PlusMinus;</b></button></td>
+                        <td><button value="RND" onclick="rnd()"><b>RND</b></button></td>
+                        <td><button value="AC" onclick="allClear()"><b>AC</b></button></td>
+                        <td><button value="=" onclick="equals()"><b>&equals;</b></button></td>
+                        <td><button value="MR" onclick="MR()"><b>MR</b></button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
